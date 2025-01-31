@@ -3,6 +3,7 @@ import re
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 def process_and_plot(directory):
     # Create a dictionary to store data grouped by angle
     data_by_angle = {}
@@ -12,7 +13,7 @@ def process_and_plot(directory):
         if filename.endswith(".txt"):
             filepath = os.path.join(directory, filename)
 
-            with open(filepath, 'r') as file:
+            with open(filepath, "r") as file:
                 lines = file.readlines()
 
                 # Extract angle and magnetic field from the header
@@ -62,6 +63,7 @@ def process_and_plot(directory):
         # Save or display each plot
         plt.savefig(f"angle_{angle}_plot.png")  # Save plot as PNG
         plt.show()  # Display the plot
+
 
 # Directory containing the data files
 data_directory = "data"
